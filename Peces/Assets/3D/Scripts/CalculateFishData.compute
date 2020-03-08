@@ -1,0 +1,42 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+static const int threadGroupSize = 1024;
+
+struct Boid {
+	float3 position;
+	float3 direction;
+
+	float3 flockHeading;
+	float3 flockCenter;
+	float3 separationHeading;
+	int numFlockmates;
+	float debug;
+};
+
+RWStructuredBuffer<Boid> boids;
+int numFishes;
+float viewRadius;
+float avoidRadius;
+
+[numthreads(threadGroupSize,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+	for (uint indexB = 0; indexB < numFishes; indexB++) {
+		if (id.x != indexB) {
+			Boid boidB = boids[indexB];
+			float3 offset = boidB.position - boids[id.x].position;
+			float sqrDst = offset.x * offset.x + offset.y * offset.y + offset.z * offset.z;
+
+			if (sqrDst < viewRadius * viewRadius) {
+				boids[id.x].numFlockmates += 1;
+				boids[id.x].flockHeading += boidB.direction;
+				boids[id.x].flockCenter += boidB.position;
+				boids[id.x].debug = max(boids[id.x].debug, sqrDst);
+				if (sqrDst < avoidRadius * avoidRadius) {
+					boids[id.x].separationHeading -= offset / sqrDst;
+				}
+			}
+		}
+	}
+}

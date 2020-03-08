@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3070a83e2c8e2cc438b9c1cb95f4f3f5, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  minSpeed: 2
+  maxSpeed: 5
+  sightRadius: 2
+  avoidRadius: 1.01
+  maxSteerForce: 2.56
+  alignWeight: 0.772
+  cohesionWeight: 0.918
+  avoidanceWeight: 3.16
