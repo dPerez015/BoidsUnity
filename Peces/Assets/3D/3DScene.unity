@@ -154,7 +154,7 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 814ce85599c23c24f96f370dfc9bcc44, type: 2}
   fishPrefab: {fileID: 1480149387880571658, guid: 17dd39f7e00f94a40bfe4c9e4c33fe4b,
     type: 3}
-  numFishes: 350
+  numFishes: 100
   spawnSize: 1
   compute: {fileID: 7200000, guid: 1e23c378aa25d2744882643b0acb3015, type: 3}
 --- !u!4 &24856157

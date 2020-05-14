@@ -18,7 +18,7 @@ MonoBehaviour:
   avoidRadius: 1
   obsAvoidRadius: 4
   maxSteerForce: 4
-  alignWeight: 0.915
-  cohesionWeight: 0.517
-  avoidanceWeight: 2.24
+  alignWeight: 0.825
+  cohesionWeight: 0.359
+  avoidanceWeight: 2.46
   obstacleAvoidanceWeight: 10
