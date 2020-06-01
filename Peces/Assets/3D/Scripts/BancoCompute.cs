@@ -16,7 +16,7 @@ public class BancoCompute : MonoBehaviour
     public float spawnSize = 2;
 
     public ComputeShader compute;
-    const int threadGroupSize = 1024;
+    const int threadGroupSize = 128;
 
     void Start()
     {
@@ -57,16 +57,16 @@ public class BancoCompute : MonoBehaviour
         //we generate an array to pass the data from the cpu to the gpu
         int numFishes = componentes.Count;
         BoidData[] data = new BoidData[numFishes];
-
+        //filling the array with actual framedata
         for(int i = 0; i < numFishes; i++)
         {
             data[i].position = componentes[i].transform.position;
             data[i].direction = componentes[i].transform.forward;
         }
-
+        //we create the buffer to pass the data
         ComputeBuffer dataBuffer = new ComputeBuffer(numFishes, BoidData.Size);
         dataBuffer.SetData(data);
-
+        //we pass the values to the GPU, setBuffer gets a kernelIndex (0 since we only have one, other wise should use FindKernel with the name of the function)
         compute.SetBuffer(0, "boids", dataBuffer);
         compute.SetInt("numFishes", numFishes);
         compute.SetFloat("viewRadius", settings.sightRadius);
@@ -85,7 +85,7 @@ public class BancoCompute : MonoBehaviour
             
             componentes[i].UpdateFish();
         }
-        Debug.Log(data[10].numFlockmates);
+        //Debug.Log(data[10].numFlockmates);
 
         dataBuffer.Release();
 

@@ -21,4 +21,4 @@ MonoBehaviour:
   alignWeight: 0.825
   cohesionWeight: 0.359
   avoidanceWeight: 2.46
-  obstacleAvoidanceWeight: 10
+  obstacleAvoidanceWeight: 6.95

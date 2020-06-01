@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: c5f37bde703094b43b23b34432fe0819, type: 3}
+  - {fileID: 2100000, guid: f03aecb7175a1ba4096930625b4a6a71, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,5 +97,6 @@ MonoBehaviour:
   avoidanceDirection: {x: 0, y: 0, z: 0}
   flockCenter: {x: 0, y: 0, z: 0}
   flockDirection: {x: 0, y: 0, z: 0}
+  obstacleAvoidDir: {x: 0, y: 0, z: 0}
   numFlockMates: 0
   drawGizmo: 0
