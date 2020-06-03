@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dot
-  m_Shader: {fileID: -6465566751694194690, guid: 0f46753816f765647869b3f8f350f7d9,
+  m_Name: Agujero
+  m_Shader: {fileID: -6465566751694194690, guid: 55a26837218792c49893f76fbbb6f31a,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -22,7 +22,19 @@ Material:
   - TransparentBackface
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _SampleTexture2D_818A7A0C_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 8d2d7076519aa5642934b378bee62aae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_ACA028A6_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 454a66b01df20dc488d8f28fb3bbdd27, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_AF188EAE_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 488abdb231d0df447b9ceea32e3b1172, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 0
@@ -33,15 +45,15 @@ Material:
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
-    - _ReceivesSSR: 0
+    - _ReceivesSSR: 1
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
     - _SrcBlend: 1
-    - _StencilRef: 0
-    - _StencilRefDepth: 32
+    - _StencilRef: 2
+    - _StencilRefDepth: 0
     - _StencilRefDistortionVec: 64
-    - _StencilRefGBuffer: 34
-    - _StencilRefMV: 160
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 128
     - _StencilWriteMask: 3
     - _StencilWriteMaskDepth: 48
     - _StencilWriteMaskDistortionVec: 64
@@ -57,11 +69,10 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_5AA2A883: {r: 0.5188679, g: 0.080767184, b: 0.080767184, a: 0}
-    - Vector3_F4862090: {r: 6.43, g: 3.94, b: 1.57, a: 0}
+    - Vector2_A9B96C22: {r: 0.54, g: 0.64, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &4501698671968281175
+--- !u!114 &2020822943063390274
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

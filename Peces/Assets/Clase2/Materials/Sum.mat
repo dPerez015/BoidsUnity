@@ -37,7 +37,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_5B9D25E8: 0.3
+    - Vector1_5B9D25E8: 0.35
     - Vector1_F51A3C5: 1
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 0
@@ -72,9 +72,9 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_11FA7614: {r: 1, g: 1, b: 0, a: 0}
-    - Color_76970061: {r: 1, g: 1, b: 0, a: 0}
-    - Color_A3257881: {r: 1, g: 1, b: 0, a: 0}
+    - Color_11FA7614: {r: 1, g: 0, b: 0, a: 0}
+    - Color_76970061: {r: 0, g: 1, b: 0, a: 0}
+    - Color_A3257881: {r: 0, g: 0, b: 1, a: 0}
     - Vector2_30F97A83: {r: 0.25, g: 0.34, b: 0, a: 0}
     - Vector2_8812F374: {r: 0.5, g: 0.77, b: 0, a: 0}
     - Vector2_9B29AF7: {r: 0.75, g: 0.33, b: 0, a: 0}

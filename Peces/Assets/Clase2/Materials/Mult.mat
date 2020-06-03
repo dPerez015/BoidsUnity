@@ -32,11 +32,13 @@ Material:
     MotionVector: User
   disabledShaderPasses:
   - MOTIONVECTORS
+  - TransparentBackface
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_AA147646: 0
+    - Vector1_AA147646: 1.03
+    - Vector1_AFD884C9: 0.31
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 0
     - _AlphaSrcBlend: 1
@@ -65,14 +67,14 @@ Material:
     - _TransparentCullMode: 2
     - _TransparentSortPriority: 0
     - _UseShadowThreshold: 0
-    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     m_Colors:
-    - Color_5BA40639: {r: 0, g: 0, b: 1, a: 0}
-    - Color_7B386B7A: {r: 0, g: 1, b: 0, a: 0}
-    - Color_9E9D98FE: {r: 1, g: 0, b: 0, a: 0}
+    - Color_5BA40639: {r: 1, g: 0, b: 1, a: 0}
+    - Color_7B386B7A: {r: 0, g: 1, b: 1, a: 0}
+    - Color_9E9D98FE: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_37A80E46: {r: 0.25, g: 0.34, b: 0, a: 0}
     - Vector2_DDDBCD11: {r: 0.75, g: 0.33, b: 0, a: 0}
     - Vector2_EAAF7F41: {r: 0.5, g: 0.77, b: 0, a: 0}
