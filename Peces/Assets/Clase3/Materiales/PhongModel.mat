@@ -32,10 +32,22 @@ Material:
     MotionVector: User
   disabledShaderPasses:
   - MOTIONVECTORS
+  - TransparentBackface
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - Texture2D_A9388F91:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_218C316E: 1
+    - Vector1_6039E9DC: 1
+    - Vector1_604783C3: 0.2
+    - Vector1_756009DF: 85.2
+    - Vector1_7F90B9E8: 1
+    - Vector1_97149AB7: 0.22
+    - Vector1_F6641413: 0.03
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 0
     - _AlphaSrcBlend: 1
@@ -49,7 +61,7 @@ Material:
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
     - _SrcBlend: 1
-    - _StencilRef: 2
+    - _StencilRef: 0
     - _StencilRefDepth: 32
     - _StencilRefDistortionVec: 64
     - _StencilRefGBuffer: 34
@@ -64,10 +76,17 @@ Material:
     - _TransparentCullMode: 2
     - _TransparentSortPriority: 0
     - _UseShadowThreshold: 0
-    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
+    - Color_6981B233: {r: 0.39800644, g: 0.68788284, b: 0.9811321, a: 0}
+    - Color_7C588C6: {r: 1, g: 1, b: 1, a: 0}
+    - Color_D030FE39: {r: 1, g: 0.6509434, b: 0.6509434, a: 0}
+    - Color_FCE30C11: {r: 1, g: 0.051886797, b: 0.051886797, a: 0}
+    - Position: {r: 0.94000024, g: 13.508218, b: 0.8000002, a: 0}
+    - Vector3_1FCDEDE5: {r: 1, g: 1.48, b: -0.98, a: 0}
+    - Vector3_2936EDAF: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
