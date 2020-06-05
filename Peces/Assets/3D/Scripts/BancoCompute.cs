@@ -49,7 +49,7 @@ public class BancoCompute : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //CalculateFishData();
+        CalculateFishData();
     }
 
     void CalculateFishData()
@@ -73,7 +73,7 @@ public class BancoCompute : MonoBehaviour
         compute.SetFloat("avoidRadius", settings.avoidRadius);
 
         int threadGroups = Mathf.CeilToInt(numFishes / (float)threadGroupSize);
-        compute.Dispatch(0, 1, 1, 1);
+        compute.Dispatch(0, threadGroups, 1, 1);
 
         dataBuffer.GetData(data);
         for(int i = 0; i<numFishes; i++)
