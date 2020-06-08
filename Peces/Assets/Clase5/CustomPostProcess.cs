@@ -6,7 +6,7 @@ using UnityEngine.Rendering.HighDefinition;
 using System;
 
 //indicamos que la clase es serializable y creamos el item en el menu de volumenes
-[Serializable, VolumeComponentMenu("Post-processing/Custom/Prueba")]
+[Serializable, VolumeComponentMenu("Post-processing/Custom/BlackAndWhite")]
 public sealed class CustomPostProcess : CustomPostProcessVolumeComponent, IPostProcessComponent
 {
     //variable que podremos editar desde el editor de volumenes, usa una clase especial
@@ -14,7 +14,6 @@ public sealed class CustomPostProcess : CustomPostProcessVolumeComponent, IPostP
     public ColorParameter color = new ColorParameter(Color.red);
 
     Material mat;
-    
 
     //lambda function asignada a isActive
     public bool IsActive() => mat != null && intensity.value > 0f;

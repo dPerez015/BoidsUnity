@@ -125,7 +125,7 @@ MonoBehaviour:
   m_HighQualityFiltering:
     m_OverrideState: 1
     m_Value: 1
---- !u!114 &-823051904710715503
+--- !u!114 &-2882409569664256235
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,16 +137,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab4f871022cd2544bf3409185a906df, type: 3}
   m_Name: CustomPostProcess
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   intensity:
-    m_OverrideState: 1
-    m_Value: 0.045
+    m_OverrideState: 0
+    m_Value: 0
     min: 0
     max: 1
   color:
-    m_OverrideState: 1
-    m_Value: {r: 0, g: 0.05546479, b: 0.9716981, a: 1}
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
@@ -166,7 +166,6 @@ MonoBehaviour:
   - {fileID: 8029961913704317347}
   - {fileID: -8326712539077902376}
   - {fileID: -3075427587821791960}
-  - {fileID: -823051904710715503}
 --- !u!114 &8029961913704317347
 MonoBehaviour:
   m_ObjectHideFlags: 3

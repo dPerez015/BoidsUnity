@@ -54,15 +54,40 @@
 #endif
 	}
 
+	float ourLuminance(float3 color) {
+		return 0.5;
+	}
+
     float4 CustomPostProcess(Varyings input) : SV_Target
     {
         UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
 		//obtenemos la posicion UV del fragmento que vamos a renderizar
         uint2 positionSS = input.texcoord * _ScreenSize.xy;
+
 		//obtenemos el color de la textura de input
         float3 outColor = LOAD_TEXTURE2D_X(_InputTexture, positionSS).xyz;
 	    
-		return float4(-outColor.xyz, 1.0);
+		//Exercise 1
+		//outColor = outColor + _ColorTint*_Intensity;
+		//outColor = outColor * float3(2, 0.7, 0.7);
+		//outColor = clamp(outColor, 0, 1);
+
+		//Exercise 2
+		/*float form = sin((input.texcoord.y) * 16) * 0.05;
+		if (input.texcoord.x > _Intensity+form)
+			return float4(Luminance(outColor).xxx, 1.0);
+		else
+			return float4(outColor, 1.0);
+		*/
+		//Exercise 3
+		//rango[-1,1], origen centro de la pantalla
+		float2 uvVig = (input.texcoord * 2) - 1;
+		uvVig = pow(uvVig, 2);
+		float d = distance(uvVig, float2(0, 0));
+		d = 1 - pow(d, 4);
+		d = lerp(0.0, 0.6, d);
+		return float4(outColor*d, 1);
+
 
     }
 
@@ -84,6 +109,7 @@
                 #pragma vertex Vert
             ENDHLSL
         }
+		
     }
     Fallback Off
 }
